@@ -1,19 +1,24 @@
 // exercise 2: Program to Calculate Elapsed Day between two dates
 #include <stdio.h>
 
-struct Date {
+struct Date
+{
     int day;
     int month;
     int year;
 };
 
-int N(struct Date d) {
+int N(struct Date d)
+{
     int result;
 
-    if (d.month <= 2) {
+    if (d.month <= 2)
+    {
         d.year = d.year - 1;
         d.month = d.month + 13;
-    } else {
+    }
+    else
+    {
         d.year = d.year;
         d.month = d.month + 1;
     }
@@ -23,25 +28,29 @@ int N(struct Date d) {
     return result;
 }
 
-int elapsed_days(struct Date d1, struct Date d2) {
+int elapsed_days(struct Date d1, struct Date d2)
+{
 
     int elapsedDays;
 
     elapsedDays = N(d2) - N(d1);
 
     if ((d1.month >= 3 && d1.year >= 1700) && (d2.month < 3 && d2.year <= 1800))// dates between March 1, 1700 and February 28, 1800
-    {   // add 2 to elapsed Days
+    {
+        // add 2 to elapsed Days
         elapsedDays = elapsedDays + 2;
     }
     else if ((d1.month >= 3 && d1.year >= 1800) && (d2.month < 3 && d2.year <= 1900)) // dates between March 1, 1800 and February 28,1900
-    {   // add 1 to elapsed Days
+    {
+        // add 1 to elapsed Days
         elapsedDays = elapsedDays + 1;
     }
 
     return elapsedDays;
 }
 
-int main() {
+int main()
+{
 
     int elapsed_days(struct Date d1, struct Date d2);
 

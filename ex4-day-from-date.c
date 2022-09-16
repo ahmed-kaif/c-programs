@@ -1,18 +1,23 @@
 #include <stdio.h>
 
-struct Date {
+struct Date
+{
     int day;
     int month;
     int year;
 };
 
-int N(struct Date d) {
+int N(struct Date d)
+{
     int result;
     int n;
-    if (d.month <= 2) {
+    if (d.month <= 2)
+    {
         d.year = d.year - 1;
         d.month = d.month + 13;
-    } else {
+    }
+    else
+    {
         d.year = d.year;
         d.month = d.month + 1;
     }
@@ -28,32 +33,41 @@ int N(struct Date d) {
 int main()
 {
     struct Date date;
-    printf("Enter a date (dd/mm/yyyy): ");
+    printf("Enter a date (dd/m/yyyy): ");
     scanf("%i/%i/%i", &date.day, &date.month, &date.year);
 
     int result = N(date);
 
     printf("%i/%i/%i the Day was a ", date.day, date.month, date.year);
-    if (result == 0){
-    printf("Sunday.");
+    if (result == 0)
+    {
+        printf("Sunday.");
     }
-    else if (result == 1) {
-    printf("Monday.");
+    else if (result == 1)
+    {
+        printf("Monday.");
     }
-    else if (result == 2) {
-    printf("Tuesday.");
+    else if (result == 2)
+    {
+        printf("Tuesday.");
     }
-    else if (result == 3) {
-    printf("Wednesday.");
+    else if (result == 3)
+    {
+        printf("Wednesday.");
     }
-    else if (result == 4) {
-    printf("Thursday.");
+    else if (result == 4)
+    {
+        printf("Thursday.");
     }
-    else if (result == 5) {
-    printf("Friday.");
+    else if (result == 5)
+    {
+        printf("Friday.");
     }
-    else {
-    printf("Saturday.");
+    else
+    {
+        printf("Saturday.");
     }
+
+    printf("%i", 1830%60);
 
 }
