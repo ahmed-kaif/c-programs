@@ -1,6 +1,7 @@
 // exercise 2: Program to Calculate Elapsed Day between two dates
 #include <stdio.h>
 
+
 struct Date
 {
     int day;
