@@ -17,19 +17,19 @@ bool alphabetic(const char c)
 int countWords(const char string[])
 {
 	int i, wordCount = 0;
-	bool lookingFwd = true, alphabetic(char const c);
+	bool lookingForWord = true, alphabetic(char const c);
 
 	for (i=0; string[i] != '\0'; ++i) {
 		if(alphabetic(string[i]))
 		{
-			if(lookingFwd)
+			if(lookingForWord)
 			{
 				++wordCount;
-				lookingFwd = false;
+				lookingForWord = false;
 			}
 		}
 		else {
-			lookingFwd = true;
+			lookingForWord = true;
 		}
 	}
 	return wordCount;
