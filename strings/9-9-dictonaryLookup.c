@@ -53,7 +53,7 @@ int main(void)
 		{"aigrette",	"an ornamental cluster of feathers" },		
 		{"ajar",		"partially open"					}
 	};
-	char word[10];
+	char word[15];
 	int entries = 10;
 	int entry;
 	int lookup(const struct entry dictonary[], const char searchString[], const int entries);
