@@ -4,7 +4,10 @@
 
 bool alphabetic(const char c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c == '\'')) {
+		return true;
+	}
+	else if ((c >= '0' && c <= '9') || (c == ',' || c == '.')) {
 		return true;
 	}
 	else {
@@ -37,8 +40,8 @@ int countWords(const char string[])
 
 int main(void)
 {
-	const char text1[] = "Well, I'm here goes.";
-	const char text2[] = "And Here we go... again.";
+	const char text1[] = "Well, I'm here goes. 12,34";
+	const char text2[] = "And Here we go... again. 10.00 ..."; // TODO: Problem in counting numbers,period and comma
 	int countWords(const char string[]);
 
 	printf("%s - words = %i\n", text1, countWords(text1));
